@@ -28,16 +28,13 @@ public class Main {
                         break;
                     case "withdraw":
                         System.out.println("Hur mycket vill du ta ut?");
-                        String input = scan.nextLine();
+                        input = scan.nextLine();
                         baf.bankAccount.deposit(Integer.parseInt(input));
                         break;
                 }
-            }
-        }
-            }
-            else{
+            } else {
                 System.out.println("Det blev fel. Försök igen, eller vill du avsluta?(J/N)");
-                String input = scan.nextLine();
+                input = scan.nextLine();
                 switch (input.toLowerCase()) {
                     case "j":
                         break;
@@ -45,9 +42,12 @@ public class Main {
                     case "n":
                         continue;
                 }
-                }
-
             }
+        }
+    }
+}
+
+
 
 
         }
