@@ -1,5 +1,3 @@
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -13,20 +11,34 @@ public class Main {
         User user = new User("603580");
 
         String input;
+
+        System.out.println("Skriv 1 för att skapa ett 'Lönekonto' eller 2 för ett 'Sparkonto'");
+        String inputAccountType = scan.nextLine();
+
+
+        if (inputAccountType.equals("1") || inputAccountType.equals("2")) {
+            baf = new BankAccountFactory(Integer.parseInt(inputAccountType), user);
+            user.addBankAccount(baf.getBankAccount());
+
+            System.out.println(inputAccountType);
+            System.out.println(baf.bankAccount.creationDate);
+
+            System.out.print("\033[H\033[2J");
+        } else{
+                System.out.println("Det blev fel. Försök igen, eller vill du avsluta?(J/N)");
+                input = scan.nextLine();
+                switch (input.toLowerCase()) {
+                    case "j":
+                        break;
+
+                    case "n":
+                        wantsToContinue = false;
+
+                }
+            }//End of else clause
+
         while (wantsToContinue) {
 
-            System.out.println("Skriv 1 för att skapa ett 'Lönekonto' eller 2 för ett 'Sparkonto'");
-            String inputAccountType = scan.nextLine();
-
-
-            if (inputAccountType.equals("1") || inputAccountType.equals("2")) {
-                baf = new BankAccountFactory(Integer.parseInt(inputAccountType), user);
-                user.addBankAccount(baf.getBankAccount());
-
-                System.out.println(inputAccountType);
-                System.out.println(baf.bankAccount.creationDate);
-
-                System.out.print("\033[H\033[2J");
 
                 System.out.println("1. Insättning\n2. Uttag\n3. Se saldo");
                 input = scan.nextLine();
@@ -46,7 +58,7 @@ public class Main {
                             break;
 
                     case "3":
-                        System.out.println(user.getBankAccount());
+                        System.out.println(user.getBankAccount().getBalance());
 
                 }
 
@@ -54,20 +66,9 @@ public class Main {
 
 
             }//End of first if case clause
-            else{
-                System.out.println("Det blev fel. Försök igen, eller vill du avsluta?(J/N)");
-                input = scan.nextLine();
-                switch (input.toLowerCase()) {
-                    case "j":
-                        break;
 
-                    case "n":
-                        wantsToContinue = false;
-
-                }
-            }//End of else clause
         }// First While loop ends here
-    }//Main method ends here
+    //Main method ends here
 
     public static void displayAccounts(User user)
     {
