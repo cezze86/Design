@@ -4,7 +4,6 @@ public class SavingsAccount extends BankAccount {
 
     protected double interestRate;
     protected LocalDateTime lastInterestPayout;
-    protected double balance;
 
 
     public SavingsAccount(String personalId, double balance) {
