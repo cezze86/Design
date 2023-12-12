@@ -9,11 +9,9 @@ public abstract class BankAccount {
 
     public BankAccount(String personalId, double balance)
     {
-
         this.personalId = personalId;
         this.balance = balance;
         this.creationDate = LocalDateTime.now();
-
     }
 
     public String getPersonalId() {
