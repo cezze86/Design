@@ -1,10 +1,6 @@
 
-
 public class SalaryAccount extends BankAccount {
-
-    private  SalaryAccount instance;
     private final DebitCard debitCard;
-
 
 
     public  SalaryAccount(String personalId, double balance) {

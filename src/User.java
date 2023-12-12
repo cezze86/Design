@@ -10,7 +10,7 @@ public class User {
         this.personalId = personalId;
     }
 
-    public void setBankAccount(BankAccount bankAccount) {
+    public void addBankAccount(BankAccount bankAccount) {
 
         this.bankAccounts.add(bankAccount);
 
@@ -18,7 +18,7 @@ public class User {
 
     public ArrayList<BankAccount> getBankAccount(BankAccount bankAccount) {
 
-        return this.bankAccounts;
+        return this.bankAccounts.get(0);
 
     }
 

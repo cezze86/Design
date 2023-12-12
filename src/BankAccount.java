@@ -36,7 +36,7 @@ public abstract class BankAccount {
     public Boolean withdraw(double balance) {
 
         if (this.balance < balance) {
-            System.out.println("Insufficient funds");
+            System.out.println("Otillräckliga medel");
             return false;
         }
         else {
