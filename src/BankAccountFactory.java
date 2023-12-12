@@ -3,7 +3,6 @@ public class BankAccountFactory {
 
     BankAccount bankAccount;
 
-    public BankAccountFactory(){}
     public BankAccountFactory(int accountType, User user) {
 
         this.init(accountType, user);
