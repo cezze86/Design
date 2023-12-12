@@ -1,10 +1,13 @@
 
 
-public class CheckingAccount extends BankAccount {
+public class SalaryAccount extends BankAccount {
 
+    private  SalaryAccount instance;
     private final DebitCard debitCard;
 
-    public CheckingAccount(String personalId, double balance) {
+
+
+    public  SalaryAccount(String personalId, double balance) {
         super(personalId, balance);
         this.debitCard = new DebitCard("5050505050", 4304);
     }
@@ -19,9 +22,7 @@ public class CheckingAccount extends BankAccount {
         else {
             return false;
         }
-
     }
-
 
 
 }

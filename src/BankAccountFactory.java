@@ -11,7 +11,7 @@ public class BankAccountFactory {
     public void init(int accountType, User user) {
         switch(accountType) {
             case 1:
-                this.bankAccount = new CheckingAccount(user.personalId, 0.0);
+                this.bankAccount = new SalaryAccount(user.personalId, 0.0);
                 break;
             case 2:
                 this.bankAccount = new SavingsAccount(user.personalId, 0.0);
