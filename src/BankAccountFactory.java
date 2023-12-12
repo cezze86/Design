@@ -14,17 +14,12 @@ public class BankAccountFactory {
                 this.bankAccount = new SalaryAccount(user.personalId, 0.0);
                 break;
             case 2:
-                this.bankAccount = new SavingsAccount(user.personalId, 0.0);
+                this.bankAccount = new SavingsAccount(user.personalId, 0.0, 2.5);
                 break;
         }
     }
 
-    /*public BankAccount getBankAccount(String accountType) {
-        if (accountType == null) {
-            return null;
-        }
-        if (accountType.equalsIgnoreCase("CHECKING")) {
-            return new CheckingAccount();
-        }
-    }*/
+    public BankAccount getBankAccount() {
+        return this.bankAccount;
+    }
 }

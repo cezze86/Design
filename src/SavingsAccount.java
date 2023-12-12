@@ -6,24 +6,12 @@ public class SavingsAccount extends BankAccount {
     protected LocalDateTime lastInterestPayout;
 
 
-    public SavingsAccount(String personalId, double balance) {
+    public SavingsAccount(String personalId, double balance, double interestRate) {
+
         super(personalId, balance);
+        this.interestRate = interestRate;
+        System.out.println("Konto1");
     }
 
-    public Boolean deposit(double balance){
-        return true;
-    }
 
-    public Boolean withdraw(double balance) {
-
-        if (this.balance < balance) {
-            System.out.println("Insufficient funds");
-            return false;
-        }
-        else {
-            this.balance -= balance; //this.balance = this.balance - balance;
-            return true;
-        }
-
-    }
 }

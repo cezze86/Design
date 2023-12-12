@@ -45,7 +45,5 @@ public abstract class BankAccount {
             this.balance -= balance; //this.balance = this.balance - balance;
             return true;
         }
-
     }
-
 }
