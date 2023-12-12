@@ -1,20 +1,27 @@
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        Boolean wantsToContinue = true;
+        Boolean wantsToTransfer = false;
         BankAccountFactory baf;
         Scanner scan = new Scanner(System.in);
+        User user = new User("603580");
 
-        System.out.println("Hello");
-        while(true) {
+        String input;
+        while (wantsToContinue) {
+
             System.out.println("Skriv 1 för att skapa ett 'Lönekonto' eller 2 för ett 'Sparkonto'");
             String inputAccountType = scan.nextLine();
 
 
-            if(inputAccountType.equals("1") || inputAccountType.equals("2")){
-                baf = new BankAccountFactory(Integer.parseInt(inputAccountType), new User("603580"));
+            if (inputAccountType.equals("1") || inputAccountType.equals("2")) {
+                baf = new BankAccountFactory(Integer.parseInt(inputAccountType), user);
+                user.addBankAccount(baf.getBankAccount());
 
                 System.out.println(inputAccountType);
                 System.out.println(baf.bankAccount.creationDate);
@@ -76,17 +83,13 @@ public class Main {
         else {
             message = "Du har inga bankkonton";
         }
+
+        System.out.format(message);
     }
 }//Class method ends here
 
 
 
 
-        }
 
-    Boolean deposit(BankAccountFactory baf, double balance) {
 
-        return baf.bankAccount.deposit(balance);
-
-    }
-}

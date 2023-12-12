@@ -4,7 +4,7 @@ public class User {
 
     String personalId;
 
-    ArrayList<BankAccount> bankAccounts;
+    ArrayList<BankAccount> bankAccounts = new ArrayList<>();
 
     public User(String personalId) {
         this.personalId = personalId;
@@ -16,7 +16,7 @@ public class User {
 
     }
 
-    public ArrayList<BankAccount> getBankAccount(BankAccount bankAccount) {
+    public BankAccount getBankAccount() {
 
         return this.bankAccounts.get(0);
 
