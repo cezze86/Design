@@ -12,6 +12,7 @@ public class Main {
 
         String input;
 
+        //Loop för användar input. Val om lönekonto eller sparkonto.
         System.out.println("Välkommen!");
         while (wantsToCreateAccount) {
             System.out.println("Skriv 1 för att skapa ett 'Lönekonto' eller 2 för ett 'Sparkonto'");
@@ -38,11 +39,12 @@ public class Main {
                         wantsToContinue = false;
 
                 }
-            }//End of else clause
+            }
+
 
             while (wantsToContinue) {
 
-
+                // Switch case uppbyggd som meny med val man kan göra i kontot man skapat.
                 System.out.println("1. Insättning\n2. Uttag\n3. Se saldo\n4. Skapa ett sparkonto\n0. Avsluta");
                 input = scan.nextLine();
                 switch (input.toLowerCase()) {
@@ -58,6 +60,7 @@ public class Main {
                         System.out.println("Hur mycket vill du ta ut?");
                         input = scan.nextLine();
                         user.getBankAccount().withdraw(Integer.parseInt(input));
+                        System.out.println("Du har tagit ut: " + String.format(input));
                         break;
 
                     case "3":
@@ -73,14 +76,8 @@ public class Main {
                         wantsToCreateAccount = false;
 
                 }
-
-                //displayAccounts(user);
-
-
-            }//End of first if case clause
-
-        }// First While loop ends here
-        //Main method ends here
+            }
+        }
     }
     public static void displayAccounts(User user)
     {
@@ -99,7 +96,7 @@ public class Main {
 
         System.out.format(message);
     }
-}//Class method ends here
+}
 
 
 

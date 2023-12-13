@@ -1,5 +1,7 @@
 import java.time.LocalDateTime;
 
+//Abstrakt klass som skapar upp instans av SalaryAccount och SavingsAccount.
+
 public abstract class BankAccount {
 
 
@@ -20,7 +22,7 @@ public abstract class BankAccount {
 
     public double getBalance() {
         return balance;
-    }
+    } // Metod för att se saldo
 
     public LocalDateTime getCreationDate() {
         return creationDate;
@@ -31,7 +33,7 @@ public abstract class BankAccount {
         this.balance += balance;
         return true;
 
-    }
+    } // Metod för insättning av pengar
 
     public Boolean withdraw(double balance) {
 
@@ -43,5 +45,5 @@ public abstract class BankAccount {
             this.balance -= balance; //this.balance = this.balance - balance;
             return true;
         }
-    }
+    } // Metod för uttag av pengar. Kollar om det finns tillräckligt pengar.
 }

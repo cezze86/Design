@@ -1,4 +1,6 @@
 
+//Klass som hämtar instanser av BankAccount
+
 public class BankAccountFactory {
 
     BankAccount bankAccount;
@@ -9,6 +11,7 @@ public class BankAccountFactory {
 
     }
 
+    // Metod där användaren väljer antingen Salary eller SavingsAccount
     public void init(int accountType, User user) {
         switch(accountType) {
             case 1:
