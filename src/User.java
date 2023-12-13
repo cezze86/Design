@@ -1,24 +1,25 @@
 import java.util.ArrayList;
 
+//User-klassen håller i information om en användare av vår app. Vi sparar personnummer och bankkonton.
 public class User {
 
     String personalId;
 
-    ArrayList<BankAccount> bankAccounts;
+    ArrayList<BankAccount> bankAccounts = new ArrayList<>();
 
     public User(String personalId) {
         this.personalId = personalId;
     }
 
-    public void setBankAccount(BankAccount bankAccount) {
+    public void addBankAccount(BankAccount bankAccount) {
 
         this.bankAccounts.add(bankAccount);
 
     }
 
-    public ArrayList<BankAccount> getBankAccount(BankAccount bankAccount) {
+    public BankAccount getBankAccount() {
 
-        return this.bankAccounts;
+        return this.bankAccounts.get(0);
 
     }
 

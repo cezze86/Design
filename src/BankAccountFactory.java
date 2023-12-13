@@ -1,14 +1,17 @@
+
+//Klass som hämtar instanser av BankAccount
+
 public class BankAccountFactory {
 
     BankAccount bankAccount;
 
-    public BankAccountFactory(){}
     public BankAccountFactory(int accountType, User user) {
 
         this.init(accountType, user);
 
     }
 
+    // Metod där användaren väljer antingen Salary eller SavingsAccount
     public void init(int accountType, User user) {
         switch(accountType) {
             case 1:
@@ -19,6 +22,7 @@ public class BankAccountFactory {
                 break;
         }
     }
+
 
     public BankAccount getBankAccount() {
         return this.bankAccount;

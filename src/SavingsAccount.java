@@ -11,7 +11,7 @@ public class SavingsAccount extends BankAccount {
         super(personalId, balance);
         this.interestRate = interestRate;
         System.out.println("Konto1");
-    }
+    } // Konstruktor
 
 
 }
