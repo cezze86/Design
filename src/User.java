@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+//User-klassen håller i information om en användare av vår app. Vi sparar personnummer och bankkonton.
 public class User {
 
     String personalId;

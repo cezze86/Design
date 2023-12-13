@@ -64,7 +64,7 @@ public class Main {
                         break;
 
                     case "3":
-                        System.out.println(user.getBankAccount().getBalance());
+                        displayAccounts(user);
                         break;
 
                     case "4":
@@ -88,6 +88,7 @@ public class Main {
             for (BankAccount bankAccount : user.bankAccounts)
             {
                 message += "Bankkontonummer " + i + " har ett saldo på: " + String.format("%.2f", bankAccount.balance) + "\n";
+                i++;
             }
         }
         else {
