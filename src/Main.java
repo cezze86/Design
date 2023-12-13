@@ -35,7 +35,7 @@ public class Main {
                         break;
 
                     case "n":
-                        wantsToContinue = false;
+                        wantsToCreateAccount = false;
 
                 }
             }//End of else clause
