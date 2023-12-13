@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Boolean wantsToContinue = true;
+        Boolean wantsToContinue = false;
         Boolean wantsToCreateAccount = true;
         BankAccountFactory baf;
         Scanner scan = new Scanner(System.in);
@@ -24,6 +24,7 @@ public class Main {
 
                 System.out.println("Ditt konto har nu skapats!");
                 System.out.println(baf.bankAccount.creationDate);
+                wantsToContinue = true;
 
 
             } else {
@@ -64,10 +65,12 @@ public class Main {
                         break;
 
                     case "4":
-                        wantsToCreateAccount = true;
+                        wantsToContinue = false;
+                        break;
 
                     case "0":
                         wantsToContinue = false;
+                        wantsToCreateAccount = false;
 
                 }
 
